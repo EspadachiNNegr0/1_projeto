@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texto Centralizado na Página</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: black;
+        }
+        .box{
+            position: absolute;
+            top: 10%;
+            left: 40%;
+            transform: translate(-50,-50);
+            background-color: rgba(39, 31, 31, 0.9);
+            padding: 15px;
+            border-radius: 15px;
+            width: 20%;
+            color: white;
+            box-shadow: 0 0 15px #641aaa, inset 0 0 15px #aa1a92;
+            transition all: 0.2s ease-in-out;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        fieldset{
+            border: 3px solid rgb(206, 57, 198);
+        }
+        legend{
+            border: 1px solid rgb(206, 57, 198);
+            padding: 10px; 
+            text-align: center;
+            background-color: rgb(206, 57, 198);
+            border-radius: 8px;
+            }
+            .inputBox{
+                position: relative;
+            }
+            .inputUser{
+                background: none;
+                border: none;
+                border-bottom: 1px solid white;
+                outline: none;
+                color: white;
+                font-size: 15px;
+                width: 100%;
+                letter-spacing: 2px;
+    
+            }
+            .labelInput{
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                pointer-events: 5px;
+                transition: .5s;
+            }
+            .inputUser:focus ~ .labelInput,
+            .inputUser:valid ~.labelInput{
+                top: 20px;
+                font-size: 12px;
+                color: rgb(116, 39, 189);
+            }
+            p{
+                font-family: Arial, Helvetica, sans-serif;
+                
+    
+            }
+    
+           
+    </style>
+</head>
+<body>
+    <div class="box" >
+        <form action="formulario.php" method="post" enctype="multipart/form-data">
+            <fieldset>
+                <legend><b>Manual</b></legend>
+                    <br>
+                    <div class="inputBox">
+                        <input type="text" name="nome" id="nome" class="inputUser" required>
+                        <p>Manual de Uso do Site:</p>
+                        <br>
+                        <p>Página de Login:</p>
+                        Para acessar o site, é necessário fazer o login com seu email e senha cadastrados.
+                        Caso ainda não tenha cadastro, clique no botão "Cadastrar" para ser direcionado à página de cadastro.
+                       
+                        <p>Página de Cadastro:</p>
+                        
+                        Na página de cadastro, preencha seus dados para criar sua conta.
+                        
+                        <p>Página Principal:</p>
+                        
+                        Após fazer o login, você será direcionado para a página principal. Aqui você encontrará dois botões:
+                       <p> - Cadastrar: Redireciona para a página de cadastro.</p>
+                       <p> - Estatística: Mostra os emails cadastrados.</p>  
+                                   
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>    
